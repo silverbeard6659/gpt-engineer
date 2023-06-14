@@ -1,9 +1,15 @@
 
 import openai
+import json
 
+def get_api_key(file_name: str) -> str:
+    with open(file_name, 'r') as f:
+        config = json.load(f)
+    return config['openai_api_key']
 
 class AI:
     def __init__(self, **kwargs):
+        openai.api_key = get_api_key("config.json")
         self.kwargs = kwargs
 
     def start(self, system, user):

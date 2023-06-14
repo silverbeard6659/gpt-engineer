@@ -1,7 +1,10 @@
+import openai
+
 from ai import AI
 from chat_to_files import to_files
 from db import DBs
 import json
+
 
 
 def setup_sys_prompt(dbs):
