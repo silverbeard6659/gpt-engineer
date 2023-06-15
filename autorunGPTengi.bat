@@ -1,1 +1,0 @@
-cd /d E:\gpt-engineer && python main.py defaultProject
